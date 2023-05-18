@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(#01012e,#240019);
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+section{
+    background: url('stars1.png');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+i{
+    color : white ; 
+}
+ul{
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    margin: 14px 0;
+}
+ul:hover li a{
+    background-color: fuchsia;
+    opacity: 0;
+}
+ul li a{
+color: #fff;
+text-decoration: none;
+font-size: 40px;
+font-weight: 500px;
+letter-spacing: 5px;
+background: darkblue;
+padding: 6px 15px;
+border-radius: 40px;
+display: inline-block;
+width: 100%;
+transition: 0.5s;
+position: relative;
+z-index: 10;
+}
+ul li a:hover{
+    transform: scale(1.5);
+    background: darkmagenta;
+    opacity: 1;
+}
+ul li::after{
+    content: attr(data-text);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 900px;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    letter-spacing: 50px;
+    transition: 0.5s;
+}
+ul li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+ul li::before{
+    content:'' ;
+    width:180px ;
+    height: 80px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/5521/5521112.png');
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,70%);
+    opacity: 0;
+    transition: 0.5s;
+}
+ul li:hover::before{
+        opacity: 1;
+        width: 80px;
+        background-position: center;
+   
+}
